@@ -37,6 +37,45 @@
      <string>Start Test</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_stop_test">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>140</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Stop Test</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_profile_per_sec">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>300</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Speed:   MBs</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_profile_total">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>340</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Total:   MBs</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

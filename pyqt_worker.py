@@ -13,9 +13,9 @@ class Worker(QThread):
         self.loop = loop(method= self.method)
 
     def run(self):
-        #self.loop.methodA()
+
         while True:
-            time.sleep(0.1)
+            time.sleep(0.001)
             self.method()
 
 
@@ -27,5 +27,5 @@ class loop(object):
 
     def methodA(self):
         while True:
-            time.sleep(3)
+            time.sleep(0.001)
             self.method()
