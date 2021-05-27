@@ -1,14 +1,19 @@
+import logging
 import socket
 import struct
 import netifaces as ni
 from log_utils import jlog
-log = jlog.logging_init("multicast_utils")
+log = jlog.logging_init("multicast_utils", log_level=logging.DEBUG)
 
 def get_eth0_ip(net_if):
-    ni.ifaddresses(net_if)
-    ip = ni.ifaddresses(net_if)[ni.AF_INET][0]['addr']
-    print("eth ip:", ip)
-    return ip
+    try:
+        ip = ni.ifaddresses('enp8s0')[ni.AF_INET][0]['addr']
+        print("ip :" ,ip)
+        return ip
+    except Exception as e:
+        print(e)
+    return None
+
 
 def joinMcast_with_if(mcast_addr, port=10000, net_if='enp8s0'):
     """

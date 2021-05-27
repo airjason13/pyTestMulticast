@@ -2,7 +2,7 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+import logging
 import sys
 from log_utils import jlog
 message = 'very important data'
@@ -18,7 +18,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
-    log = jlog.logging_init("main")
+    log = jlog.logging_init("main", log_level=logging.DEBUG)
     log.debug("This is main")
     print("yeah")
     qtapp = QtWidgets.QApplication([])
